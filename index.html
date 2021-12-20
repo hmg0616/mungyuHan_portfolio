@@ -28,9 +28,14 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <style>
-    #othersBtn:hover {
+    .customHoverBtn:hover {
       color: #149ddd !important;
       cursor: pointer;
+    }
+    @media (min-width: 1400px) {
+      .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1140px;
+      }
     }
   </style>
 
@@ -53,7 +58,7 @@
 
       <div class="profile">
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">한문규</a></h1>
+        <h1 class="text-light"><a href="index.html">한문규 (Mungyu Han)</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://github.com/hmg0616" class="github"><i class="bx bxl-github"></i></a>
           <a href="https://gitlab.com/mungyu83" class="facebook"><i class="bx bxl-gitlab"></i></a>
@@ -66,9 +71,11 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Career</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <!--
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          -->
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -155,7 +162,7 @@
               </ul>
             </p>
           </div>
-          <p id="othersBtn" onclick="doDisplay('others1,others2,others3')" style="color:#37b3ed;">▼ 그 외 기타 다루어본 기술</p>
+          <p id="othersBtn" class="customHoverBtn" onclick="doDisplay('others1,others2,others3')" style="color:#37b3ed;">▼ 그 외 기타 다루어본 기술</p>
           <div id="others1" class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" style="display:none;">
             <h4 class="title" style="color:#37b3ed;">Backend</h4>
             <p class="description">
@@ -177,7 +184,7 @@
             </p>
           </div>
           <div id="others3" class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" style="display:none;">
-            <h4 class="title" style="color:#37b3ed;">App</h4>
+            <h4 class="title" style="color:#37b3ed;">APP</h4>
             <p class="description">
               <ul>
                 <li>Android Studio</li>
@@ -188,8 +195,290 @@
       </div>
     </section><!-- End Skills Section -->
 
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Career</h2>
+        </div>
+
+        <div class="row">
+          <!-- Carrer 왼쪽 컬럼 -->
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>컴퓨터공학과</h4>
+              <h5>2013.02 - 2019.02</h5>
+              <p><em>홍익대학교 서울캠퍼스</em></p>
+              <ul>
+                <li>이수학점 142 (전공 70)</li>
+                <li>총 평점 4.22, 전공 평점 4.27</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>졸업 프로젝트 (스마트 미러)</h4>
+              <h5>2018.03 - 2018.12</h5>
+              <p><em>날씨, 일정, 대중교통정보 등을 확인할 수 있고 메이크업 유튜브를 보며 화장을 하는 등 다양하게 활용이 가능한 거울 디스플레이 플랫폼</em></p>
+              <ul>
+                <li>성과</li>
+                <ul>
+                  <li>졸업프로젝트 우수상 수여</li>
+                  <li>한이음 입선</li>
+                </ul>
+                <li>기술 스택</li>
+                <ul>
+                  <li>Vue.js, Express.js, AWS EC2/S3/Lambda, Android studio</li>
+                </ul>
+              </ul>
+              <a id="mirror-detail" href="#"><b>▶ 자세히 보기</b></a>
+            </div>
+
+            <h3 class="resume-title">Side Project</h3>
+            <div class="resume-item pb-0">
+              <h4>어제보다더</h4>
+              <p><em>바쁜 직장인을 위해 직관적으로 날씨 정보를 제공하는 어플리케이션</em></p>
+              <ul>
+                <li>업무 내용</li>
+                  <ul>
+                    <li>어제와 오늘, 오늘과 내일 날씨 비교를 통해 체감할 수 있는 온도 차이를 직관적 멘트로 제공</li>
+                    <li>화면, API, 배치 개발 및 무중단 배포를 위한 CI/CD 구현, 안드로이드 앱 및 위젯 개발</li>
+                  </ul>
+                <li>성과</li>
+                  <ul>
+                    <li>구글 평점 4.9, 현 300 다운로드 (2021-12-17 기준)</li>
+                  </ul>
+                <li>기술 스택</li>
+                  <ul>
+                    <li>Frontend</li>
+                      <ul>
+                        <li>HTML, Javascript, jQuery, JSP, Google Analytics, Bootstrap, SSL, gitlab page</li>
+                      </ul>
+                    <li>Backend</li>
+                      <ul>
+                        <li>Git, Gitlab CI/CD, AWS EC2, Docker, MariaDB</li>
+                        <li>Spring Boot 2, Spring boot batch, Java8, JPA, Swagger, logback, Jenkins, Slack alarm</li>
+                      </ul>
+                    <li>APP</li>
+                      <ul>
+                        <li>Android studio</li>
+                      </ul>
+                  </ul>
+              </ul>
+              <a id="mty-detail" href="#"><b>▶ 자세히 보기</b></a>
+            </div>
+          </div>
+
+          <!-- Carrer 오른쪽 컬럼 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">SSG.COM</h3>
+            <div class="resume-item">
+              <h4>Summary</h4>
+              <h5>2019.03 - 현재</h5>
+              <p><em>JAVA & Spring Framework 기반 3년차 백엔드 개발자</em></p>
+              <ul>
+                <li>ECMS (이마트 자동화 물류센터 관리 시스템) 업무 담당<br>(2019.03 - 2021.02)</li>
+                <li>정산 업무 담당 (2019.11 - 2021.02)</li>
+                <li>재고 업무 담당 (2021.01 - 현재)</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>ECMS (이마트 자동화 물류센터 관리 시스템) 업무 담당</h4>
+              <h5>2019.03 - 2021.02</h5>
+              <p><em>ECMS 운영 업무 대응 및 개발/고도화 작업</em></p>
+              <ul>
+                <li><b>매입 프로세스 화면 및 배치 개발/운영</b></li>
+                <ul>
+                  <li>가금류 거래내역 신고를 위한 조회 프로세스 개발</li>
+                  <li>스타벅스 상품 매입 내역 연동 인터페이스 테이블 설계 및 API 개발</li>
+                </ul>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>정산 업무 담당</h4>
+              <h5>2019.11 - 2021.02</h5>
+              <p><em>매매익 및 오픈마켓 지불 시스템 개발</em></p>
+              <p id="trdePrftBtn" class="customHoverBtn" onclick="doDisplay('trdeprft')" ><b>▼ 매매익 개발 및 운영</b></p>
+              <ul id="trdeprft" style="display:none;">
+                <li>업무 내용</li>
+                <ul>
+                  <li>점포 및 신세계몰 상품에 대해 매입, 대출입, 폐기, 재고실사 및 매출 데이터 일집계 수행</li>
+                  <li>매월 말 한달치 집계 내역에 대한 월마감 정산 수행 후 분개장 생성 및 재무 전송 수행</li>
+                </ul>
+                <li>성과</li>
+                <ul>
+                  <li>월 마감 정산 및 분개 처리, 데이터 이상 건 보정 및 원인 해결</li>
+                  <li>데이터 계산식 변경, 컬럼 추가 등 재무 요구사항 반영</li>
+                  <li>집계 프로시져 리팩토링을 통한 가독성 개선</li>
+                  <li>쿼리 튜닝 및 중간 집계 테이블 생성을 통한 매매익 조회 속도 개선 (7분→10초)</li>
+                  <li>체커 개발을 통한 데이터 이상 건 사전 검증</li>
+                </ul>
+                <li>기술 스택</li>
+                <ul>
+                  <li>Oracle PL/SQL, SQL, Spring 3.2, java 8, mybatis, javascript, html, jenkins</li>
+                </ul>
+              </ul>
+
+              <p id="openMarketBtn" class="customHoverBtn" onclick="doDisplay('openMarket')" ><b>▼ 오픈마켓 업체 지불 시스템 개발</b></p>
+              <ul id="openMarket" style="display:none;">
+                <li>업무 내용</li>
+                <ul>
+                  <li>금융망 환경에서의 백오피스 화면 및 배치 개발</li>
+                  <ul>
+                    <li>오픈마켓 국내 및 해외 업체 주기별 정산대금 지불 시스템 설계 및 개발</li>
+                    <li>통화별 환율정보 관리 프로세스 개발</li>
+                    <li>수취인 성명 조회를 위한 배치 개발</li>
+                  </ul>
+                  <li>우리은행 WIN-CMS 시스템 연동 프로세스 개발 및 서버 설정 작업</li>
+                </ul>
+                <li>성과</li>
+                <ul>
+                  <li>오픈마켓 국내 및 해외 업체 일/월별 정산대금 지불 수행</li>
+                  <li>통화별 환율정보 관리를 통한 지불 금액 세부 조정</li>
+                  <li>수취인 성명 조회를 통한 지불 데이터 이상 건 사전 파악</li>
+                </ul>
+                <li>기술 스택</li>
+                <ul>
+                  <li>Oracle PL/SQL, SQL, Spring 3.2, java 8, mybatis, javascript, html, jenkins</li>
+                </ul>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>재고 업무 담당</h4>
+              <h5>2021.01 - 현재</h5>
+              <p><em>점포, 점포센터, 직매입, 온라인 재고 관리. 백오피스 화면, API, 배치 개발/리팩토링</em></p>
+              <p><em>대규모 트래픽 처리를 위한 MSA 환경에서의 재고 시스템 운영 및 지속적 고도화</em></p>
+              <p id="invMsa2Btn" class="customHoverBtn" onclick="doDisplay('invMsa2')" ><b>▼ 재고 MSA v2.0 오픈</b></p>
+              <ul id="invMsa2" style="display:none;">
+                <li>업무 내용</li>
+                <ul>
+                  <li>재고 API 분리 및 재고 DB 분리</li>
+                  <li>재고 조회 API Spring webflux 전환</li>
+                </ul>
+                <li>성과</li>
+                <ul>
+                  <li>Oracle → mongoDB 및 REDIS 전환</li>
+                  <li>KAFKA 메시징 시스템을 통한 재고 데이터 연동</li>
+                  <li>event driven 기반 asynchronous / non-blocking API</li>
+                  <ul>
+                    <li>Spring MVC → Spring webflux 전환</li>
+                    <li>tps 3~4배 개선 (ngrinder 성능 테스트, pod 1개 기준)</li>
+                    <ul>
+                      <li>기존 mvc : 1075tps</li>
+                      <li>신규 webflux : 3850tps</li>
+                    </ul>
+                  </ul>
+                  <li>JUnit 테스트 코드 작성 및 blockhound 블로킹 검출</li>
+                </ul>
+                <li>기술 스택</li>
+                <ul>
+                  <li>Spring boot 2, java 8, MongoDB, Redis, Kafka, Spring data, Spring webflux, Junit5, blockhound, swagger</li>
+                  <li>pinpoint, rancher, AKHQ, ngrinder</li>
+                </ul>
+              </ul>
+
+              <p id="smallInvBtn" class="customHoverBtn" onclick="doDisplay('smallInv')" ><b>▼ 신세계몰 재고 프로세스 v2.0 오픈</b></p>
+              <ul id="smallInv" style="display:none;">
+                <li>업무 내용</li>
+                <ul>
+                  <li>재고 수불 일마감 및 변동 프로세스 개선</li>
+                  <li>재고 데이터 정합성을 위한 설계 수정 및 개발</li>
+                  <ul>
+                    <li>재고 일마감 및 변동 데이터 프론트 실시간 반영</li>
+                    <li>가용재고 계산 로직 수정</li>
+                    <li>재고 데이터 이상 건 확인 및 보정 작업</li>
+                  </ul>
+                  <li>재고 폐기 및 승인 프로세스 오픈</li>
+                </ul>
+                <li>성과</li>
+                <ul>
+                  <li>재고 반영 기준 변경을 통한 현업 업무 단순화</li>
+                  <li>재고 데이터 정합성 확보</li>
+                  <li>현업에 재고 폐기 기능 제공 및 매매익 반영</li>
+                  <li>재고 변동량 이력 확인 단순화</li>
+                </ul>
+                <li>기술 스택</li>
+                <ul>
+                  <li>Oracle PL/SQL, SQL, Spring 3.2, java 8, mybatis, javascript, html, jenkins</li>
+                </ul>
+              </ul>
+
+              <p id="etcInvBtn" class="customHoverBtn" onclick="doDisplay('etcInv')" ><b>▼ 기타 재고 업무</b></p>
+              <ul id="etcInv" style="display:none;">
+                <li>체화재고 처분</li>
+                  <ul>
+                    <li>입고 후 특정기간 이상 미판매 재고 처분을 위한 프로세스</li>
+                  </ul>
+                <li>재고 이중화</li>
+                  <ul>
+                    <li>특정 점포 재고를 타 점포에서 판매하기 위한 프로세스</li>
+                  </ul>
+                <li>MCI(Must Carry Item)</li>
+                  <ul>
+                    <li>재고 운영 효율 증가 및 고객에게 더 많은 재고 노출을 위한 프로세스</li>
+                  </ul>
+                <li>오픈마켓 재고 품절 API</li>
+                  <ul>
+                    <li>오픈마켓 업체별 재고 품절 수량 제공</li>
+                  </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-mirror">스마트미러</li>
+              <li data-filter=".filter-mty">어제보다더</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mirror">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
 
     <!-- ======= Facts Section ======= -->
+    <!--
     <section id="facts" class="facts">
       <div class="container">
 
@@ -235,192 +524,12 @@
         </div>
 
       </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Alex Smith</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+    -->
+    <!-- End Facts Section -->
 
     <!-- ======= Services Section ======= -->
+    <!--
     <section id="services" class="services">
       <div class="container">
 
@@ -463,15 +572,16 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
+    -->
+    <!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <section id="testimonials" class="testimonials">
       <div class="container">
 
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -516,32 +626,6 @@
               </div>
             </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -550,68 +634,33 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section-bg">
       <div class="container">
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p></p>
         </div>
 
         <div class="row" data-aos="fade-in">
 
-          <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="col-lg-12 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Seoul, Republic of Korea</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>mungyu83@gmail.com</p>
               </div>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202408.3386236039!2d126.83400130811664!3d37.56377334335626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2z64yA7ZWc66-86rWtIOyEnOyauO2KueuzhOyLnA!5e0!3m2!1sko!2sbg!4v1640022134791!5m2!1sko!2sbg" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen loading="lazy"></iframe>
             </div>
 
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
           </div>
 
         </div>
