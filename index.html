@@ -28,14 +28,14 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <style>
-    .customHoverBtn:hover {
-      color: #149ddd !important;
-      cursor: pointer;
-    }
     @media (min-width: 1400px) {
       .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1140px;
       }
+    }
+    .customHoverBtn:hover {
+      color: #149ddd !important;
+      cursor: pointer;
     }
   </style>
 
@@ -71,12 +71,13 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Career</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file"></i> <span>Experience</span></a></li>
           <!--
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
           -->
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-user-voice"></i> <span>Testimonials</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-conversation"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -200,7 +201,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Career</h2>
+          <h2>Experience</h2>
         </div>
 
         <div class="row">
@@ -221,7 +222,18 @@
               <h4>졸업 프로젝트 (스마트 미러)</h4>
               <h5>2018.03 - 2018.12</h5>
               <p><em>날씨, 일정, 대중교통정보 등을 확인할 수 있고 메이크업 유튜브를 보며 화장을 하는 등 다양하게 활용이 가능한 거울 디스플레이 플랫폼</em></p>
-              <ul>
+              <a href="https://youtu.be/gYBLRbyFG4o" target="_blank">시연 영상 링크</a>
+              <p id="mirrorBtn" class="customHoverBtn" onclick="doDisplay('mirror')" style="margin-top:1rem;"><b>▼ 프로젝트 상세</b></p>
+              <ul id="mirror" style="display:none;">
+                <li>개발 내역</li>
+                <ul>
+                  <li>음성 인식을 통한 기능 제어</li>
+                  <li>현재 시간, 날씨 등 기본 정보 제공</li>
+                  <li>구글 스케쥴 연동 및 카카오톡, SNS 등 안드로이드 PUSH 알람 연동</li>
+                  <li>음악 감상 및 유튜브 시청</li>
+                  <li>버스 도착 정보 및 지하철 노선 검색</li>
+                  <li><s>퍼스널 컬러 측정 기능 및 감성 분석 기능(aws rekognition)</s></li>
+                </ul>
                 <li>성과</li>
                 <ul>
                   <li>졸업프로젝트 우수상 수여</li>
@@ -232,41 +244,43 @@
                   <li>Vue.js, Express.js, AWS EC2/S3/Lambda, Android studio</li>
                 </ul>
               </ul>
-              <a id="mirror-detail" href="#"><b>▶ 자세히 보기</b></a>
             </div>
 
             <h3 class="resume-title">Side Project</h3>
             <div class="resume-item pb-0">
               <h4>어제보다더</h4>
               <p><em>바쁜 직장인을 위해 직관적으로 날씨 정보를 제공하는 어플리케이션</em></p>
-              <ul>
-                <li>업무 내용</li>
-                  <ul>
-                    <li>어제와 오늘, 오늘과 내일 날씨 비교를 통해 체감할 수 있는 온도 차이를 직관적 멘트로 제공</li>
-                    <li>화면, API, 배치 개발 및 무중단 배포를 위한 CI/CD 구현, 안드로이드 앱 및 위젯 개발</li>
-                  </ul>
+
+              <a href="https://prairie-fireplant-294.notion.site/8c254e0f073d4cb2a623f89c20372de2" target="_blank">애플리케이션 링크</a>
+
+              <p id="mtyBtn" class="customHoverBtn" onclick="doDisplay('mty')" style="margin-top:1rem;"><b>▼ 프로젝트 상세</b></p>
+              <ul id="mty" style="display:none;">
+                <li>개요</li>
+                <ul>
+                  <li>어제와 오늘, 오늘과 내일 날씨 비교를 통해 체감할 수 있는 온도 차이를 직관적 멘트로 제공</li>
+                  <li>화면, API, 배치 개발 및 무중단 배포를 위한 CI/CD 구현, 안드로이드 앱 및 위젯 개발</li>
+                </ul>
                 <li>성과</li>
-                  <ul>
-                    <li>구글 평점 4.9, 현 300 다운로드 (2021-12-17 기준)</li>
-                  </ul>
+                <ul>
+                  <li>구글 평점 4.9, 현 300 다운로드 (2021-12-17 기준)</li>
+                </ul>
                 <li>기술 스택</li>
+                <ul>
+                  <li>Frontend</li>
                   <ul>
-                    <li>Frontend</li>
-                      <ul>
-                        <li>HTML, Javascript, jQuery, JSP, Google Analytics, Bootstrap, SSL, gitlab page</li>
-                      </ul>
-                    <li>Backend</li>
-                      <ul>
-                        <li>Git, Gitlab CI/CD, AWS EC2, Docker, MariaDB</li>
-                        <li>Spring Boot 2, Spring boot batch, Java8, JPA, Swagger, logback, Jenkins, Slack alarm</li>
-                      </ul>
-                    <li>APP</li>
-                      <ul>
-                        <li>Android studio</li>
-                      </ul>
+                    <li>HTML, Javascript, jQuery, JSP, Google Analytics, Bootstrap, SSL, gitlab page</li>
                   </ul>
+                  <li>Backend</li>
+                  <ul>
+                    <li>Git, Gitlab CI/CD, AWS EC2, Docker, MariaDB</li>
+                    <li>Spring Boot 2, Spring boot batch, Java8, JPA, Swagger, logback, Jenkins, Slack alarm</li>
+                  </ul>
+                  <li>APP</li>
+                  <ul>
+                    <li>Android studio</li>
+                  </ul>
+                </ul>
               </ul>
-              <a id="mty-detail" href="#"><b>▶ 자세히 보기</b></a>
             </div>
           </div>
 
@@ -276,7 +290,7 @@
             <div class="resume-item">
               <h4>Summary</h4>
               <h5>2019.03 - 현재</h5>
-              <p><em>JAVA & Spring Framework 기반 3년차 백엔드 개발자</em></p>
+              <p><em>SSG.COM(쓱닷컴) JAVA & Spring Framework 기반 3년차 백엔드 개발자</em></p>
               <ul>
                 <li>ECMS (이마트 자동화 물류센터 관리 시스템) 업무 담당<br>(2019.03 - 2021.02)</li>
                 <li>정산 업무 담당 (2019.11 - 2021.02)</li>
@@ -376,8 +390,8 @@
                 </ul>
                 <li>기술 스택</li>
                 <ul>
-                  <li>Spring boot 2, java 8, MongoDB, Redis, Kafka, Spring data, Spring webflux, Junit5, blockhound, swagger</li>
-                  <li>pinpoint, rancher, AKHQ, ngrinder</li>
+                  <li>Spring boot 2, java 8, MongoDB, Redis, Kafka, Spring data, Spring webflux, Junit5, Blockhound, Swagger</li>
+                  <li>Pinpoint, Rancher, AKHQ, Ngrinder</li>
                 </ul>
               </ul>
 
@@ -403,7 +417,7 @@
                 </ul>
                 <li>기술 스택</li>
                 <ul>
-                  <li>Oracle PL/SQL, SQL, Spring 3.2, java 8, mybatis, javascript, html, jenkins</li>
+                  <li>Oracle PL/SQL, SQL, Spring 3.2, Java 8, Mybatis, Javascript, Html, Jenkins</li>
                 </ul>
               </ul>
 
@@ -437,9 +451,11 @@
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
 
+        <!--
         <div class="section-title">
           <h2>Portfolio</h2>
         </div>
+        -->
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -455,20 +471,119 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-mirror">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/mirror1.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="assets/img/portfolio/mirror1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="스마트미러"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mirror-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mirror">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mirror2.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mirror2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="스마트미러"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mirror-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mirror">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mirror3.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mirror3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="스마트미러"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mirror-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mirror">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mirror4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mirror4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="스마트미러"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mirror-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mirror">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mirror5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mirror5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="스마트미러"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mirror-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mirror">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mirror6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mirror6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="스마트미러"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mirror-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/mty1.JPG" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="assets/img/portfolio/mty1.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="어제보다더"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mty-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mty2.JPG" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mty2.JPG" data-gallery="portfolioGallery" class="portfolio-lightbox" title="어제보다더"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mty-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mty3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mty3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="어제보다더"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mty-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mty4.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mty4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="어제보다더"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mty-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mty5.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mty5.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="어제보다더"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mty-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mty6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mty6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="어제보다더"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mty-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mty">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/mty7.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/mty7.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="어제보다더"><i class="bx bx-plus"></i></a>
+                <!--<a href="portfolio-mty-details.html" title="상세보기"><i class="bx bx-link"></i></a>-->
               </div>
             </div>
           </div>
@@ -591,12 +706,14 @@
               <div class="testimonial-item" data-aos="fade-up">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    <br><br>
+                    코멘트
+                    <br><br>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <img src="assets/img/testimonials/basic-profile.jpg" class="testimonial-img" alt="">
+                <h3>Name</h3>
+                <h4>Job</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -604,12 +721,14 @@
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    <br><br>
+                    코멘트
+                    <br><br>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <img src="assets/img/testimonials/basic-profile.jpg" class="testimonial-img" alt="">
+                <h3>Name</h3>
+                <h4>Job</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -617,12 +736,14 @@
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    <br><br>
+                    코멘트
+                    <br><br>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <img src="assets/img/testimonials/basic-profile.jpg" class="testimonial-img" alt="">
+                <h3>Name</h3>
+                <h4>Job</h4>
               </div>
             </div><!-- End testimonial item -->
 
@@ -644,7 +765,7 @@
 
         <div class="row" data-aos="fade-in">
 
-          <div class="col-lg-12 d-flex align-items-stretch">
+          <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
@@ -661,6 +782,19 @@
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202408.3386236039!2d126.83400130811664!3d37.56377334335626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2012d5c39cf%3A0x7e11eca1405bf29b!2z64yA7ZWc66-86rWtIOyEnOyauO2KueuzhOyLnA!5e0!3m2!1sko!2sbg!4v1640022134791!5m2!1sko!2sbg" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen loading="lazy"></iframe>
             </div>
 
+          </div>
+
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <div class="info">
+              <script src="https://utteranc.es/client.js"
+                      repo="hmg0616/mungyuHan_portfolio_comments"
+                      issue-term="pathname"
+                      theme="github-light"
+                      crossorigin="anonymous"
+                      async>
+              </script>
+            </div>
           </div>
 
         </div>
